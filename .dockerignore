@@ -1,0 +1,36 @@
+# Git metadata
+.git
+.gitignore
+
+# Docker configuration files (prevents baking them inside the container)
+docker-compose.yaml
+Dockerfile
+
+# Local environment secrets
+.env
+
+# Python caching and compiled files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.tox/
+.coverage
+htmlcov/
+
+# Local Python virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Airflow runtime directories (very important!)
+# If you map these via volumes, you do NOT want Docker to copy old, stale host logs into the image build.
+logs/
+plugins/
+config/
+
+# OS-specific clutter
+.DS_Store
+Thumbs.db
